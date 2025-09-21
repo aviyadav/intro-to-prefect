@@ -1,0 +1,20 @@
+[project]
+name = "intro-to-prefect"
+version = "0.1.0"
+description = "An introductory project to Prefect"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "prefect>=3.4.19",
+    "psycopg2-binary>=2.9.10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pre-commit"
+]
+
+[project.scripts]
+pipeline = "pipeline.main:main"
